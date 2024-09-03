@@ -1,0 +1,22 @@
+{
+  "name": "YourTok",
+  "short_name": "YourTok",
+  "description": "Une application web pour visionner les vidéos de famille.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",  // Cela masque les barres de navigation du navigateur.
+  "background_color": "#000000",  // Couleur de fond lorsque l'app est chargée.
+  "theme_color": "#000000",  // Couleur de la barre de statut.
+  "icons": [
+    {
+      "src": "/web/icon-192x192.png",  // Ajoutez vos propres icônes ici.
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/web/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

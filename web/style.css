@@ -1,0 +1,289 @@
+/* style.css */
+
+html {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  
+  a {
+      text-decoration: none;
+      color: white;
+  }
+  
+  img {
+      width: 100%;
+  }
+  
+  .handjet-<uniquifier> {
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    
+    font-variation-settings:
+      "ELGR" 1,
+      "ELSH" 2;
+  }
+  
+  body {
+      font-family: 'Handjet', sans-serif; /* Using modern font */
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #121212; /* Dark background for better video visibility */
+      color: #FFFFFF; /* Light text to contrast with the dark background */
+      display: flex;
+      flex-direction: column;
+      font-size: x-large;
+      justify-content: space-around;
+      background-image: url('./fond.jpg'); /* Replace with your image path */
+      background-size: cover; /* Cover the entire area while maintaining proportions */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      background-attachment: fixed; /* Keep the image fixed when scrolling */
+  }
+  
+  h1 {
+      font-size: xxx-large;
+      margin: 10px;
+      font-weight: normal;
+      text-transform: uppercase;
+  }
+  
+  h3 {
+      margin: 10px;
+      font-weight: normal;
+  }
+  
+  p {
+      text-align: center;
+  }
+  
+  #splash {
+      text-align: center;
+      padding: 20px;
+      height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transition: opacity 0.5s ease;
+  }
+  
+  #welcome {
+      max-width: 600px;
+  }
+
+.mobile-instructions {
+    display: none;
+}
+.instructions {
+    display: initial;
+}
+  
+  button {
+      font-family: "Handjet", sans-serif;
+      font-size: x-large;
+      background-color: #31322D;
+      color: #ffffff;
+      margin: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      min-width: 90px;
+  }
+  
+  .icon {
+      width: auto;
+  }
+  
+  button:hover, #yearSelect:hover, #yearSelect:active {
+      background-color: #937429;
+  }
+  
+  #yearSelect {
+      font-family: "Handjet", sans-serif;
+      text-align: center;
+      background: #31322D;
+      color: #ffffff;
+      padding: 10px;
+      font-size: x-large;
+      border-radius: 5px;
+      margin: 10px;
+  }
+  
+  button, #yearSelect {
+      font-family: "Handjet", sans-serif;
+      border: none;
+      border-radius: 10px;
+      height: 70%;
+      width: 28vw;
+  }
+  
+  #mainContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 95vh;
+      transition: opacity 0.5s ease;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      max-width: 800px;
+      margin: auto;
+  }
+  
+  #title, #controls {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100px;
+      max-width: 660px;
+  }
+  
+  #videoContainer {
+      display: flex;
+      flex-direction: column;
+      min-height: 50vh;
+      width: 100%;
+  }
+  
+  #videoPlayer {
+      width: 100%;
+      max-width: 800px;
+      max-height: 50vh;
+      background-color: #000;
+  }
+  
+  .videoInfo {
+      margin: 10px;
+  }
+  
+  #videoDate, #videoTitle {
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      color: white;
+      padding: 5px 10px;
+      font-size: xx-large;
+  }
+  
+  /* Class added to make the splash screen disappear */
+  .fade-out {
+      opacity: 0;
+  }
+  
+  /* Class added to make the main content appear */
+  .fade-in {
+      opacity: 1;
+  }
+  
+  /* CSS for slide animations */
+  #videoContainer {
+      position: relative;
+      overflow: hidden; /* Hide content that slides out of view */
+  }
+  
+  /* Animation to slide up and reset */
+  .slide-up {
+      animation: slideUpOut 0.5s forwards; /* Slide up */
+  }
+  
+  .slide-down {
+      animation: slideDownOut 0.5s forwards; /* Slide down */
+  }
+  
+  /* Reset position after exiting for the next entry */
+  @keyframes slideUpOut {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-150%); }
+  }
+  
+  @keyframes slideDownOut {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(150%); }
+  }
+  
+  /* Classes to make the new video enter in the same direction */
+  .slide-up-in {
+      transform: translateY(150%);
+      animation: slideUpIn 0.5s forwards; /* Slide up to enter */
+  }
+  
+  .slide-down-in {
+      transform: translateY(-150%);
+      animation: slideDownIn 0.5s forwards; /* Slide down to enter */
+  }
+  
+  @keyframes slideUpIn {
+      0% { transform: translateY(150%); }
+      100% { transform: translateY(0); }
+  }
+  
+  @keyframes slideDownIn {
+      0% { transform: translateY(-150%); }
+      100% { transform: translateY(0); }
+  }
+  
+  /* HOME ANIMATION */
+  
+  #camera {  
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      height: 60vh;
+      background-image: url(./icon.png);
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  
+  @keyframes floating {
+      0% { transform: translate(0, 0px); }
+      50% { transform: translate(0, 15px); }
+      100% { transform: translate(0, -0px); }
+  }
+  
+  @media (hover: none) { 
+        .mobile-instructions {
+            display:initial;
+        }
+        .instructions {
+            display:none;
+        }
+        .swipe-indicator {
+            position: absolute;
+            top: calc(50% - 20px);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, .5);
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgba(150, 150, 150, .1);
+            animation: swipe-animation 1.5s linear infinite;
+            left: calc(50% - 20px);
+        }
+        
+        @keyframes swipe-animation {
+            0% {
+                top: 50vh;
+                border-color: rgba(150, 150, 150, 0);
+                background-color: rgba(0, 0, 0, 0);
+            }
+            50% {
+                top: 30vh;
+                background-color: rgba(0, 0, 0, .5);
+                border-color: rgba(150, 150, 150, .1);
+            }
+            100% {
+                top: 10vh;
+                border-color: rgba(150, 150, 150, 0);
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }
+  }
