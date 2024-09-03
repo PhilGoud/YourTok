@@ -1,7 +1,7 @@
 # YourTok
 A simple website to scroll through hundreds of small videos
 
-![image](https://github.com/user-attachments/assets/ad746f45-11a2-40f9-b680-60bd9e9439f2)
+![image](https://github.com/user-attachments/assets/a95c30db-88d6-4377-8a58-99fdbd31d4d9)
 
 
 Background : created to watch all the small family home videos from the confort of our phones
