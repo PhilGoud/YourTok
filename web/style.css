@@ -96,6 +96,7 @@ html {
   
   .icon {
       width: auto;
+      margin-right: 5px;
   }
   
   button:hover, #yearSelect:hover, #yearSelect:active {
