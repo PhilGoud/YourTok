@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourTok</title>
+    <link rel="icon" type="image/x-icon" href="./web/icon.png">
+    <link rel="stylesheet" href="./web/style.css">
+    <link rel="manifest" href="./web/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet" rel="stylesheet">
+    <meta name="theme-color" content="#000000"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div id="splash"  >
+        <div id="camera" alt="camera">
+        </div>
+        <div id="welcome">
+            <h1>Welcome to YourTok</h1>
+            <p class="instructions">Use the up or down keyboard keys to move forward or backward in time</p>
+            <p class="mobile-instructions">Swipe up or down to move forward or backward in time</p>
+        </div>
+        <div id="controls">
+            <button id="startBtn"><img src = "./web/play.svg" alt="PLAY" class="icon" />&nbsp;&nbsp;PLAY</button>
+            <button id="randomBtn"><img src = "./web/shuffle.svg" alt="SHUFFLE" class="icon" />&nbsp;&nbsp;SHUFFLE</button>
+        </div>
+        <span class="swipe-indicator"></span>
+    </div>
+    
+    <div id="mainContent" style="display:none;">
+        <a href="./"><div id="title">
+            <img src="./web/icon-small.png" alt="camera"><h1>YourTok</h1>
+        </div></a>
+        <div id="videoContainer">
+            <div id="videoDate" class="videoInfo"></div>
+            <video id="videoPlayer" controls></video>
+            <div id="videoTitle" class="videoInfo"></div>
+        </div>
+        <div id="controls">
+            <select id="yearSelect" >
+              <option value="" selected>YEAR</option>
+              <!-- Options années seront ajoutées ici par le script -->
+            </select>
+            <button id="randomBtnMain"><img src = "./web/shuffle.svg" alt="SHUFFLE" class="icon" />&nbsp;&nbsp;SHUFFLE</button>
+            <button id="shareBtn"><img src = "./web/link.svg" alt="LINK" class="icon" />&nbsp;&nbsp; LIEN</button>
+
+        </div>
+    </div>
+    <script src="./web/script.js"></script>
+</body>
+</html>
